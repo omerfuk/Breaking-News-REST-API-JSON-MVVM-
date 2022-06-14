@@ -17,6 +17,7 @@
 		DE1564352849341300C1B507 /* Webservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1564342849341300C1B507 /* Webservice.swift */; };
 		DE1564372849375700C1B507 /* ArticleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1564362849375700C1B507 /* ArticleViewModel.swift */; };
 		DE15643A28493AC300C1B507 /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE15643928493AC300C1B507 /* ArticleTableViewCell.swift */; };
+		DE6550D7284A2BCF0049815A /* ArticleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6550D6284A2BCF0049815A /* ArticleDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		DE1564342849341300C1B507 /* Webservice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Webservice.swift; sourceTree = "<group>"; };
 		DE1564362849375700C1B507 /* ArticleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewModel.swift; sourceTree = "<group>"; };
 		DE15643928493AC300C1B507 /* ArticleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleTableViewCell.swift; sourceTree = "<group>"; };
+		DE6550D6284A2BCF0049815A /* ArticleDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				DE15641B2849320300C1B507 /* ViewController.swift */,
+				DE6550D6284A2BCF0049815A /* ArticleDetailViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 				DE1564372849375700C1B507 /* ArticleViewModel.swift in Sources */,
 				DE1564352849341300C1B507 /* Webservice.swift in Sources */,
 				DE15643A28493AC300C1B507 /* ArticleTableViewCell.swift in Sources */,
+				DE6550D7284A2BCF0049815A /* ArticleDetailViewController.swift in Sources */,
 				DE15641A2849320300C1B507 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

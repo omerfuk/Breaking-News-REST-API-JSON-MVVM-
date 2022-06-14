@@ -62,6 +62,10 @@ extension ArticleViewModel {
         return self.article.author
     }
     
+    var image: String? {
+        return self.article.urlToImage
+    }
+    
     
     
 }

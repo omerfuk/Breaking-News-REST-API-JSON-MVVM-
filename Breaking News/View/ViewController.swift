@@ -8,6 +8,11 @@
 import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
+    
+    
+    var articles = [Article]()
+    var chosenArticles: Article?
+    
  
     private var articleListVM: ArticleListViewModel!
     
@@ -24,12 +29,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     
+    
+    
+    
+    
     func setUp() {
         let url = URL(string: "https://newsapi.org/v2/top-headlines?country=tr&apiKey=9069de5f9f0a4266abcf43425301a5be")!
         
         Webservice().getData(url: url) { articles in
             if let articles = articles {
-                self.articleListVM = ArticleListViewModel(articles: articles)
+                self.articles = articles
                 
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
@@ -41,13 +50,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     //TableView Functions
     
     
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return self.articleListVM == nil ? 0: self.articleListVM.numberOfSections
-    }
-    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.articleListVM.numberOfRowsInSection(section)
+        return self.articles.count
     }
     
     
@@ -56,7 +61,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ArticleTableViewCell
-        let articleVM = articleListVM.articleAtIndex(indexPath.row)
+        let articleVM = articles[indexPath.row]
         
         cell.titleLabel.text = articleVM.title
         cell.descriptionLabel.text = articleVM.description
@@ -64,6 +69,27 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         return cell
     }
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+            chosenArticles = articles[indexPath.row]
+
+
+            let page = ArticleDetailViewController()
+            page.selectedArticles = articles[indexPath.row]
+
+
+        self.performSegue(withIdentifier: "DetailCell", sender: nil)
+        
+        }
+
+        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            if segue.identifier == "DetailCell" {
+                let destinationVC = segue.destination as! ArticleDetailViewController
+                destinationVC.selectedArticles = chosenArticles
+            }
+        }
+   
    
 
 }
