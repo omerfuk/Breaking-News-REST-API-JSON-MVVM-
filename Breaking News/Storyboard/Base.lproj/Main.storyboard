@@ -65,7 +65,6 @@
                                             <outlet property="authorLabel" destination="YTr-DW-xw5" id="Cqp-6b-LqH"/>
                                             <outlet property="descriptionLabel" destination="Ofd-bq-aNc" id="BZM-kc-p0b"/>
                                             <outlet property="titleLabel" destination="GOt-kW-bec" id="dIW-Lo-6tz"/>
-                                            <segue destination="RQk-Cn-cGI" kind="show" identifier="DetailCell" id="Mtr-tU-aWe"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -83,6 +82,7 @@
                     <navigationItem key="navigationItem" title="Breaking News" id="KEq-19-vuY"/>
                     <connections>
                         <outlet property="tableView" destination="B98-hd-6gu" id="Nme-al-WEX"/>
+                        <segue destination="RQk-Cn-cGI" kind="show" identifier="DetailCell" id="qOv-Jt-Yye"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -92,7 +92,7 @@
         <!--Article Detail View Controller-->
         <scene sceneID="lgl-SK-AjP">
             <objects>
-                <viewController storyboardIdentifier="detail" useStoryboardIdentifierAsRestorationIdentifier="YES" id="RQk-Cn-cGI" customClass="ArticleDetailViewController" customModule="Breaking_News" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="detailCell" useStoryboardIdentifierAsRestorationIdentifier="YES" id="RQk-Cn-cGI" customClass="ArticleDetailViewController" customModule="Breaking_News" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="teY-pz-zAK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -155,7 +155,6 @@
         <!--Navigation Controller-->
         <scene sceneID="QfS-Ya-h2J">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gDp-Hf-hn0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wuV-rg-G4b" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="USA-Hs-EMP">
@@ -167,8 +166,9 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="xeR-gE-6FC"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gDp-Hf-hn0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-26.086956521739133" y="107.8125"/>
+            <point key="canvasLocation" x="-617" y="113"/>
         </scene>
     </scenes>
     <resources>

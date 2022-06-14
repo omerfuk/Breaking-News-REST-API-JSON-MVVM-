@@ -88,6 +88,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 let destinationVC = segue.destination as! ArticleDetailViewController
                 destinationVC.selectedArticles = chosenArticles
             }
+            
+            
         }
    
    
