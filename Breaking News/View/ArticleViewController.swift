@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
+class ArticleViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
     
     var articles = [Article]()
